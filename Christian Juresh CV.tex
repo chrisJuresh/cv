@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+
 
 
 %----------FONT OPTIONS----------
@@ -68,11 +69,18 @@
   }
 }
 
+\newcommand{\resumeSubtitle}[1]{
+  \vspace{5pt}
+  \small{
+      \textit{#1 \vspace{-7pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      {\small#3} & {\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -128,7 +136,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
         {Queen Mary University of London}{Sep. 2021 -- May 2024}
-      {{\normalfont BSc Hons in Computer Science, 1st (82.4\%) }}{}
+      {{\normalfont Bachelor of Science in Computer Science, First-Class with Honours (82.4\%) }}{}
       \resumeItem{EECS Final Year Project Prize for Outstanding Achievement (92.7\%)}
   \resumeSubHeadingListEnd
 
@@ -139,37 +147,41 @@
 
 
     \resumeSubheading
-      {Third Bridge Group Limited}{Sep. 2024 -- Present}
-      {Integration Engineer}{London, UK}
+      {Software Engineer}{Sep. 2024 -- Present}
+      {Third Bridge}{Remote - London, UK}
+      
+      \resumeSubtitle{Engineering business workflows, integrating systems, and supplying critical data to business intelligence platforms}
       \resumeItemListStart
-\resumeItem{Developed BigQuery Python scripts for Marshall Wace and D.E. Shaw to process client data.}
-\resumeItem{Introduced Black, isort and pre-commits, ensuring compatibility with existing flake8 and CI/CD configuration.}
-\resumeItem{Refactored and redeployed cronjobs and services to a new Google Cloud cluster, projected to save £500 a month}
-\resumeItem{Responsible for engineering business workflows, integrating internal and third-party systems, and supplying critical data to internal business intelligence platforms, dashboards and slack alerts.}
+\resumeItem{Developed \textbf{BigQuery Python} scripts to provide sensitive data for clients such as Marshall Wace and D.E. Shaw.}
+\resumeItem{Overhauled and migrated legacy cronjobs and services to a new \textbf{Google Cloud Kubernetes} cluster, projected to save Third Bridge over £6000 a year, while upgrading code modularity, readability, and resilience.}
+\resumeItem{Designed a scalable \textbf{CustomerIO} library to reduce the code required to send emails down to 1 line, implementing consistent branding through templates, batch event processing and polymorphism to cover a range of input types.}
+\resumeItem{Introduced Black, isort and pre-commits, ensuring compatibility with existing flake8 and \textbf{CI/CD} configuration.}
       \resumeItemListEnd
   
     \resumeSubheading
-      {Royal College of Radiologists}{Aug. 2022 -- Sep. 2024}
-      %{Lead Professional Services Administrator}{London, UK}
-      {Professional Services Administrator}{London, UK}
-      \resumeItemListStart
+      {Professional Services Administrator}{Aug. 2022 -- Sep. 2024}
+      {Royal College of Radiologists}{Hybrid - London, UK}
       
-\resumeItem{Independently managed and completed the job plan evaluation process for consultant radiologist and oncologist vacancies across 104+ NHS Trusts, coordinating with HR personnel and Regional Specialty Advisors.}
-\resumeItem{Collaborated with NHS services to assign the most suitable RCR representatives for consultant appointment panels from a database of over 360 doctors, automating the majority of the process using Python’s Flask framework.}
-\resumeItem{Developed Excel spreadsheets with intelligent algorithms to enhance data organisation, processing, and analysis - reducing the time required for a full-time position by 60\% and assisting various colleagues.}
-\resumeItem{Introduced VBA, Power Query, PivotTables, and Python’s pandas and Matplotlib for data analysis and reporting.}
-\resumeItem{Formulated and documented system requirements for a CRM built on Dynamics365 and SharePoint.}
-\resumeItem{Consulted the software and database design for a medical AI tools registry.}
+      \resumeSubtitle{Independently managing the job plan evaluation process and assembling Advisory Appointment Committee (AAC) panels for consultant radiologist and consultant oncologist vacancies across over 104 NHS Trusts.}
+      \resumeItemListStart
+\resumeItem{Automated the majority of the AAC process using the \textbf{Flask} framework.}
+\resumeItem{Developed Excel spreadsheets for multiple collegues with intelligent algorithms to enhance data organisation, processing, and analysis - reducing the time required for this full-time position by 60\%.}
+\resumeItem{Introduced \textbf{VBA}, \textbf{Power Query}, \textbf{PivotTable}, \textbf{pandas} and \textbf{Matplotlib} for data analysis and reporting.}
+\resumeItem{Formulated and documented system requirements for a \textbf{CRM} built on \textbf{Dynamics365} and \textbf{SharePoint}.}
+\resumeItem{Designed a functional prototype website in \textbf{Django} and \textbf{SvelteKit} to automate the entire administrative process.}
+\resumeItem{Consulted the software and \textbf{database design} for a medical AI tools registry.}
       \resumeItemListEnd
       
 
     \resumeSubheading
-      {Royal College of Obstetricians and Gynaecologists}{Jul. 2024 -- Sep. 2024}
-      {Workforce and Professionalism Assistant}{London, UK}
+      {Workforce and Professionalism Assistant}{Jul. 2024 -- Sep. 2024}
+      {Royal College of Obstetricians and Gynaecologists}{Remote - London, UK}
+      
+      \resumeSubtitle{Consulting on the job plan evaluation and AAC process, and managing up to £18,900 in awards and prizes}
       \resumeItemListStart
-\resumeItem{Consulted on and took part in the job plan review and Advisory Appointment Committee service.}
-\resumeItem{Collated and presented figures to a panel of Doctors to support the bestowal of awards and up to £18,900 in prizes using abstract management software and data analysis, tracking insights for 387 submissions.}
-\resumeItem{Automated and optimised various administrative processes using PivotTables and complex Excel formulas}
+\resumeItem{Collated and presented figures to a panel of Doctors using abstract management software and \textbf{data analysis}.}
+\resumeItem{Automated and optimised various administrative processes using PivotTable and complex Excel formulas.}
+\resumeItem{Designed a \textbf{Python BS4} web-scraper to complete job plan audits, automating a bi-monthly weeklong process.}
   \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -183,10 +195,12 @@
 %-------------------------------------------
 
     \resumeSubheading
-      {Queen Mary University of London}{Sep. 2022 -- Apr. 2024}
-      {Computer Science Demonstrator}{London, UK}
+      {Computer Science Demonstrator}{Sep. 2022 -- Apr. 2024}
+      {Queen Mary University of London}{On-Site - London, UK}
+      
+      \resumeSubtitle{Providing support to first- and second-year university students, taking attendance, and grading coursework.}
       \resumeItemListStart
-\resumeItem{Provided support to first- and second-year university students, and graded coursework for modules including: \\ Professional and Research Practice, Procedural Programming (Java), and Graphical User Interfaces (React.js).}
+\resumeItem{Modules include: \\ Professional and Research Practice, Procedural Programming (\textbf{Java}), and Graphical User Interfaces (\textbf{React.js}).}
     \resumeItemListEnd
 
 %     \resumeSubheading
@@ -200,30 +214,7 @@
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      
     
-      \resumeProjectHeading
-          {\textbf{Royal College NHS Jobs Audit Automation} $|$ \emph{Python, BeautifulSoup, numpy, pandas, tkinter, sklearn.}}{}
-          \resumeItemListStart
-          
-\resumeItem{Designed a program to automate job plan audits for Royal Colleges, allowing a bi-monthly weeklong process at the RCOG to be completed monthly automatically, and providing the RCR with long-needed but previously unobtainable insights.}
-\resumeItem{Built a BS4 web scraper to extract valuable data from hundreds of jobs, including the job description documents.}
-\resumeItem{Implemented a fuzzy matching algorithm to match the job descriptions to an internal archive of thousands of documents, utilising multithreading due to the high volume of data, and supporting a variety of file formats.}
-\resumeItem{Utilised Python to transform and visualise data for reporting.}
-
-            \resumeItemListEnd
-
-            \resumeProjectHeading
-      {\textbf{RCR JD \& AAC Prototype Site} $|$ \emph{Python, django-ninja, JavaScript/TypeScript, SvelteKit, Linux, Nginx, SQL, Certbot, Zod}}{}
-      \resumeItemListStart
-        \resumeItem{Developed a fully functional prototype website to automate job description reviews and advisory appointment committee panels for the Royal College of Radiologists. Achieved 92.7\% for the dissertation and source code.}
-        \resumeItem{Created a full-stack web application with django-ninja serving a REST API and SvelteKit as the frontend. Implemented robust security measures with SSL, and JWT authentication with email verification through PostMark.}
-        \resumeItem{Designed a highly relational database schema, using Pydantic for API data validation, and OpenAPI-Typescript to transfer type checking alongside data from backend to frontend with a custom API consumption library.}
-        \resumeItem{Used PyTransitions to create object-oriented finite state machines to enforce strict workflows, and pioneered fully dynamic grid forms in Superforms, with custom validation settings per cell defined in an admin panel in accordance to WCAG 2.2.}
-      \resumeItemListEnd
-\resumeSubHeadingListEnd
     %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
@@ -243,7 +234,7 @@
      XML.
      } \\
      \textbf{Frameworks}{: 
-     Django (DRF \& ninja), 
+     Django, 
      SvelteKit, 
      BigQuery,
      PyTorch, 
@@ -267,7 +258,6 @@
      Power Query, 
      GnuPG, 
      Teams, 
-     Photoshop, 
      Lightroom. 
      } \\
     }}
